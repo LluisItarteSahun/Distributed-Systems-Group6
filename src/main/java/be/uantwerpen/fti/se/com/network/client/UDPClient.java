@@ -10,7 +10,7 @@ public class UDPClient {
     public static void main(String[] args) {
         String serverIP = "127.0.0.1";
         int serverPort = 6000;
-        String fileName = "TestUDP.txt";
+        String fileName = "test.txt";
 
         try (DatagramSocket socket = new DatagramSocket()) {
             byte[] requestData = fileName.getBytes();

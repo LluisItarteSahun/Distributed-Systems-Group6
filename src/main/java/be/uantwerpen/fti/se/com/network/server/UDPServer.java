@@ -13,7 +13,7 @@ public class UDPServer extends Thread {
         byte[] buffer = new byte[1024];
 
         try (DatagramSocket socket = new DatagramSocket(port)) {
-            System.out.println("UDP SERVER LISTENING TO PORT" + port);
+            System.out.println("UDP SERVER LISTENING TO PORT " + port);
 
             while (true) {
                 DatagramPacket request = new DatagramPacket(buffer, buffer.length);
@@ -34,7 +34,7 @@ public class UDPServer extends Thread {
                         socket.send(response);
                     }
                     fis.close();
-                    System.out.println("File SenT" + fileName);
+                    System.out.println("File Sent" + fileName);
                 } else {
                     String errorMsg = "ERROR: file not found";
                     DatagramPacket response = new DatagramPacket(errorMsg.getBytes(), errorMsg.length(), clientAddress, clientPort);
